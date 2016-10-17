@@ -1,7 +1,25 @@
 Modulo Tareas
-	Subir Tareas (tasub)
-	Consultar Tareas (tacon)
-	Enviar Tareas (taenv)
-	Descargar Tareas (tades)
+	Subir Tareas 		(tasub)
+	Consultar Tareas 	(tacon)
+	Enviar Tareas 		(taenv)
+	Descargar Tareas 	(tades)
 
 Modulo Postulacion a Ayudantias
+	Levantar Solicitud 				(aylev)
+	Enviar Solicitud 				(ayenv)
+	Consultar Postulciones 			(aycon)
+	Seleccionar Ayudabte 			(aysel)
+	Notificar Seleccionados 		(aynot)
+	Consultar estado de postulacion	(ayest)
+
+Modulo Postulacion a Practica
+	Enviar formulario de práctica 	(prenv)
+	Consultar Solicitudes Pendientes(prcon)
+	Evaluar Solicitud 				(preva)
+	Notificar Resultado de Solicitud(prnot)
+	Consultar Estado de Solicitud 	(prest)
+
+Modulo Login
+	Crear Cuenta 	(logcre)
+	Iniciar Sesion 	(logini)
+
