@@ -1,0 +1,105 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[pdftex]{graphicx}
+\graphicspath{{img/}}
+\DeclareGraphicsExtensions{.PNG, .jpg, .png}
+\usepackage{pdfpages}
+\usepackage{amsmath}
+\usepackage{qtree}
+\usepackage{minted}
+\usepackage[backend=bibtex,style=numeric]{biblatex}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{geometry}
+\usepackage{enumerate}
+ \geometry{
+ a4paper,
+ total={160mm,257mm},
+ left=26mm,
+ top=20mm,
+ }
+
+\addbibresource{ref.bib}
+
+
+
+\title{Diseño de Sistemas Transaccionales \\ \huge Proyecto \\ \Huge UdpCursos }
+\author{Manuel Alba \and Francisco González \and Matias Vera}
+\date{Septiembre 27, 2016}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+    En el proyecto del curso se buscará implementar las funcionalidades transaccionales de algunos de los módulos de la plataforma UdpCursos. Es necesario ocupar sistemas transaccionales debido a que se estima que en los horarios pic de uso se espera una gran demanda desde los usuarios, por lo que se necesita que el sistema sea robusto y expedito. Este proyecto busca agilizar diversos procesos internos de la Universidad con el fin de 
+    gestionar de mejor forma los siguientes módulos:
+\end{abstract}
+
+\section{Tareas}
+
+\begin{table}[h!]
+\centering
+\caption{Funcionalidades Transaccionales del Módulo de Tareas}
+\begin{tabular}{|l|p{2.0cm}|p{4.0cm}|p{4.0cm}|}
+\hline
+Funcionalidad     & Rol                & Entradas & Salidas \\ \hline
+Subir tareas      & Profesor, Ayudante & Enunciado, Fecha Limite, Hora Limite, Código de curso & ID Tarea,Código Mensaje de Confirmación\\ \hline
+Consultar tareas  & Profesor, Ayudante & ID Tarea, Código Curso & Lista de Tareas enviadas por ID \\ \hline
+Enviar tareas     & Alumnos            & ID Tarea, Código Curso, ID archivo tarea subida, Rut & Código Mensaje de Confirmación \\ \hline
+Descargar Tareas  & Profesor, Ayudante & ID Tarea, Código Curso & Llave archivo comprimido de tareas \\ \hline
+\end{tabular}
+\end{table}
+\newpage
+\section{Postulación a Ayudantías}
+
+\begin{table}[h!]
+\centering
+\caption{Funcionalidades Transaccionales del Módulo de Postulación a Ayudantías}
+
+\begin{tabular}{|l|p{2.0cm}|p{4.0cm}|p{4.0cm}|}
+\hline
+Funcionalidad           & Rol                             & Entradas                                      &   Salidas\\ \hline
+Levantar Solicitud      & Coordinador Académico           &  Código Curso, Semestre, Horario        & ID Postulación, Código Mensaje de Confirmación  \\ \hline
+Enviar Solicitud        & Postulantes                     &  Rut del Postulante, Razón de la Postulación, Código de curso & ID Postulación           \\ \hline
+Consultar Postulaciones & Coordinador Académico, Profesor & Código Curso &    Listado de Postulaciones realizadas, por ID \\ \hline
+Seleccionar Ayudante    & Profesor                        &  Código Curso, ID Postulación realizada  & Código Mensaje de confirmación, Rut postulante, ID Postulación realizada     \\ \hline
+Notificar Seleccionados & Coordinador Académico           &  Rut postulante seleccionado, ID Postulación realizada & Código Mensaje de Confirmación \\ \hline
+Consultar Estado de Postulación & Postulantes             &  Rut, Código Curso       &  ID Postulación realizada, Estado Postulación realizada     \\ \hline
+\end{tabular}
+\end{table}
+
+\section{Postulación a Prácticas}
+
+\begin{table}[h!]
+\centering
+\caption{Funcionalidades Transaccionales del Módulo de Solicitud de Prácticas}
+
+\begin{tabular}{|l|p{2.0cm}|p{4.0cm}|p{4.0cm}|}
+\hline
+Funcionalidad           & Rol                                   & Entradas & Salidas              \\ \hline
+Enviar formulario de práctica      & Postulante                 & Rut del Postulante, Datos Personales, Datos Empresa Datos Practicas & ID Solicitud, Código Mensaje de Confirmación \\ \hline
+Consultar solicitudes pendientes       & Coordinador de Prácticas  & Rut Postulante, ID Solicitud & Llave del formulario de postulación generado, Código mensaje de Confirmación   \\ \hline
+Evaluar solicitud    & Coordinador de Prácticas                 & ID Solicitud, Rut Postulante, Evaluación, Observaciones  & Código Mensaje de confirmación  \\ \hline
+Notificar Resultado de solicitud & Coordinador de Prácticas     & ID Solicitud, Rut Postulante Evaluado & Código Mensaje Confirmación  \\ \hline
+Consultar estado de solicitud & Postulante                      & Rut &  ID Solicitud, Estado Solicitud, Código Mensaje Confirmación  \\ \hline
+\end{tabular}
+\end{table}
+
+\section{Login}
+
+\begin{table}[h!]
+\centering
+\caption{Funcionalidades Transaccionales del Módulo de Login}
+
+\begin{tabular}{|l|p{2.0cm}|p{4.0cm}|p{4.0cm}|}
+\hline
+Funcionalidad           & Rol  & Entradas & Salidas                 \\ \hline
+Crear Cuenta      & Usuario General & Rut, Contraseña & Código Mensaje de Confirmación o Error\\ \hline
+Iniciar Sesión        & Usuario General & Rut, Contraseña & Código Mensaje de Confirmación o Error\\ \hline
+\end{tabular}
+\end{table}
+
+
+
+\end{document}
