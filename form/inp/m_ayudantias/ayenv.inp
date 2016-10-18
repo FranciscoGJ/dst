@@ -1,5 +1,5 @@
 #Enviar Solicitud
-ID ayenv 160131 515 20
+ID ayenv 160131 515 14
 opc debug
 ct inv
 fs 1 20
@@ -26,7 +26,7 @@ ce 16 4 50 265 AN 0
 ce 17 4 50 315 AN 0
 ce 18 4 50 365 AN 0
 #---------------------------
-cs 20 4 14 0 AN 0
-cm 21 4 20 14
-tm 01 20 aaaaaaaaaaaaaaaaaaaa
+cf 20 4 15 ID Postulacion
+cs 20 20 14 0 AN 0
+#cm 21 20 20 14
 ff

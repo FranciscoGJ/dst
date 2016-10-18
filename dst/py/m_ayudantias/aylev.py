@@ -16,13 +16,9 @@ def proceso(aci,tx_in,tx_out,tx_sa):
     print "aca",respuesta
 
     from time import sleep
+    sleep(6)
 
-
-    tx_out = "123456789"
-
-    print tx_out
-
-    sleep(3)
+    tx_out = "0201"
 
     return {'tx_out':tx_out,'tx_sa':tx_sa,'aci':aci}
 
