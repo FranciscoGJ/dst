@@ -8,6 +8,7 @@ fa aycon1 aycon2
 #
 fs 1 20
 box 0 0 10 30
+cf 2 2 24 Consultar Postulaciones
 #-----------------------------
 cf 4 4 12 Codigo Curso
 ce 5 4 7 0 AN 0

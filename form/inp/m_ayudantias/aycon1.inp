@@ -1,5 +1,5 @@
 #Consultar Postulaciones 1
-ID aycon1 160134 0 1230
+ID aycon1 160134 0 1640
 opc debug
 ct inv
 #
@@ -44,4 +44,15 @@ cs 24 25 50 1027 AN 0
 cs 25 25 50 1077 AN 0
 cs 26 25 50 1127 AN 0
 cs 27 25 50 1177 AN 0
+#-----------------------------
+cs 28 3 7 1227 AN 0
+cs 28 17 2 1234 AN 0
+cs 28 25 50 1236 AN 0
+cs 29 25 50 1286 AN 0
+cs 30 25 50 1336 AN 0
+cs 31 25 50 1386 AN 0
+cs 32 25 50 1436 AN 0
+cs 33 25 50 1486 AN 0
+cs 34 25 50 1536 AN 0
+cs 35 25 50 1586 AN 0
 ff
