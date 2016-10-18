@@ -1,9 +1,9 @@
 #Consultar Estado de Postulacion
-ID ayest 160132 15 20
+ID ayest 160132 15 16
 opc debug
 ct inv
 fs 1 20
-box 0 0 25 60
+box 0 0 25 40
 cf 2 2 31 Consultar Estado de Postulacion
 #---------------------------
 cf 4 4 12 Codigo Curso
@@ -16,8 +16,13 @@ ce 8 4 8 6 AN 0
 cf 8 12 1 -
 ce 8 13 1 14 AN 0
 #---------------------------
-
-cs 20 4 14 0 AN 0
-cm 21 4 20 14
-tm 01 20 aaaaaaaaaaaaaaaaaaaa
+cf 10 4 14 ID Postulacion
+cs 10 19 14 0 AN 0
+#---------------------------
+cm 12 4 25 14
+tm 00 5 Error
+tm 01 19 Solicitud Pendiente
+tm 02 18 Solicitud Aceptada
+tm 03 24 Error Curso no Existente
+tm 04 25 Error Seccion Inexistente
 ff

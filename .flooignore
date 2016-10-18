@@ -1,4 +1,5 @@
-c/dist/*
+build/*
+*.fmt
 *.pyc
 *.pyo
 *~

@@ -2,8 +2,16 @@ from os import getpid
 from enviar_demonio import Cola_mensajes
 
 def proceso(aci,tx_in,tx_out,tx_sa):
-    #print tx_in
-    
+    print tx_in
+    if len(tx_in) < 14:
+        tx_out = "".join([" " for i in range(14)]) + ("00")
+        return {'tx_out':tx_out,'tx_sa':tx_sa,'aci':aci}
+
+    elif tx_in.count(' ') == 14:
+    	tx_out = "".join([" " for i in range(14)]) + ("00")
+    	return {'tx_out':tx_out,'tx_sa':tx_sa,'aci':aci}
+
+
     data = {}
     data["modo"] = "ay_levantar_solicitud"
     data["cod_curso"]=tx_in[0:][:7]
