@@ -1,1 +1,18 @@
-aysel
+#Levantar Solicitud
+ID aylev 160130 14 16
+opc debug
+ct inv
+fs 1 20
+box 0 0 20 30
+cf 2 2 18 Levantar Solicitud
+cf 4 4 12 Codigo Curso
+cf 5 12 1 -
+ce 5 4 7 0 AN 0
+ce 5 13 2 7 AN 0
+cf 7 4 15 Codigo Semestre
+cf 8 8 1 -
+ce 8 4 4 9 AN 0
+ce 8 9 1 13 AN 0
+cs 10 4 14 0 AN 0
+cm 12 4 20 14
+ff

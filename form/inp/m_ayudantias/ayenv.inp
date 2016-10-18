@@ -1,1 +1,32 @@
-ayenv
+#Enviar Solicitud
+ID ayenv 160131 515 20
+opc debug
+ct inv
+fs 1 20
+box 0 0 25 60
+cf 2 2 16 Enviar Solicitud
+#---------------------------
+cf 4 4 12 Codigo Curso
+ce 5 4 4 0 AN 0
+cf 5 8 1 -
+ce 5 9 2 4 AN 0
+#---------------------------
+cf 7 4 14 Rut Postulante
+ce 8 4 8 6 AN 0
+cf 8 12 1 -
+ce 8 13 1 14 AN 0
+#---------------------------
+cf 10 4 14 Motivo Postulacion
+ce 11 4 50 15 AN 0
+ce 12 4 50 65 AN 0
+ce 13 4 50 115 AN 0
+ce 14 4 50 165 AN 0
+ce 15 4 50 215 AN 0
+ce 16 4 50 265 AN 0
+ce 17 4 50 315 AN 0
+ce 18 4 50 365 AN 0
+#---------------------------
+cs 20 4 14 0 AN 0
+cm 21 4 20 14
+tm 01 20 aaaaaaaaaaaaaaaaaaaa
+ff
