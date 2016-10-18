@@ -1,5 +1,5 @@
 #Consultar Postulaciones 0
-ID aycon0 160133 9 0
+ID aycon0 160133 9 2
 #
 opc debug
 ct inv
@@ -15,4 +15,7 @@ ce 5 4 7 0 AN 0
 cf 5 12 1 -
 ce 5 13 2 7 AN 0
 #-----------------------------
-
+cm 6 4 18 0
+tm 99 5 Error
+tm 01 18 Curso no Existente
+tm 02 24 No Hay Vacantes en Curso

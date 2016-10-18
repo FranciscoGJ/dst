@@ -1,6 +1,6 @@
 import pika
 from json import dumps,loads
-
+from os import getpid
 class Cola_mensajes(object):
     def __init__(self):
 
@@ -23,9 +23,9 @@ class Cola_mensajes(object):
         if self.corr_id == props.correlation_id:
             self.response = loads(body)
 
-    def enviar(self, pid,data):
+    def enviar(self,data):
         self.response = None
-        self.corr_id = str(pid)
+        self.corr_id = str(getpid())
         self.channel.basic_publish(exchange='',
                                    routing_key='rpc_queue',
                                    properties=pika.BasicProperties(

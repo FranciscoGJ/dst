@@ -7,7 +7,7 @@ Modulo Tareas
 Modulo Postulacion a Ayudantias
 	Levantar Solicitud 				(aylev)	#
 	Eliminar Solicitud 				(ayelis)6
-	Enviar Postulacion 				(ayenv)	1
+	Enviar Postulacion 				(ayenv)	#
 	Actualizar Postulacion 			(ayactp)4
 	Eliminar Postulacion 			(ayelip)5
 	Consultar estado de postulacion	(ayconp)3

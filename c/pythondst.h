@@ -19,10 +19,8 @@ void Python(char *Module,char *aci, struct trans *tx_in, struct trans *tx_out, s
     ret=PyObject_CallObject(myFunction,args);
     PyObject* out = PyDict_GetItemString(ret,"tx_out");
     PyObject* sa = PyDict_GetItemString(ret,"tx_sa");
-/*
     PyObject* acis = PyDict_GetItemString(ret,"aci");
-
-    strcpy(aci,PyString_AsString(acis));*/
+    strcpy(aci,PyString_AsString(acis));
     strcpy(tx_out->datos,PyString_AsString(out));
     tx_out->len= strlen(tx_out->datos);
     strcpy(tx_sa->datos,PyString_AsString(sa));

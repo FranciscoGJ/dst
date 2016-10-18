@@ -1,4 +1,3 @@
-from os import getpid
 from datetime import datetime
 
 from dst import *
@@ -46,10 +45,9 @@ def proceso(aci,tx_in,tx_out,tx_sa):
         tx_out = generator_space(14)+ ("05")
         return {'tx_out':tx_out,'tx_sa':tx_sa,'aci':aci}
 
-    pid = getpid()
     cola = Cola_mensajes()
 
-    respuesta = cola.enviar(pid,data)
+    respuesta = cola.enviar(data)
 
     #print "ACA",respuesta
     tx_out = "%s%s"%(respuesta["id"],respuesta["code"])

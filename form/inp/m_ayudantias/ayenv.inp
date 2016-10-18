@@ -1,5 +1,5 @@
 #Enviar Solicitud
-ID ayenv0 16031 515 24
+ID ayenv0 16031 515 25
 opc debug
 ct inv
 fs 1 40
@@ -27,10 +27,10 @@ ce 17 4 50 318 AN 0
 ce 18 4 50 368 AN 0
 #-------------------------
 cf 20 4 14 ID Postulacion
-cs 20 19 22 0 AN 0
+cs 20 19 23 0 AN 0
 #------------------------
-cm 22 4 27 22
-tm 00 5 Error
+cm 22 4 27 23
+tm 99 5 Error
 tm 01 27 Solicitud Enviada Con Exito
 tm 02 25 Error Curso Inexistente
 tm 03 21 Error Rut
