@@ -1,9 +1,47 @@
-#Consulta 0
-ID aycon1 050411 tx_in tx_out
-#
+#Consultar Postulaciones 1
+ID aycon1 160134 0 1230
 opc debug
 ct inv
 #
 fa aycon0 aycon2
 #
-fs y x
+fs 1 60
+box 0 0 40 80
+cf 2 2 13 Postulaciones
+cf 3 3 12 Codigo Curso
+cf 3 17 7 Seccion
+cf 3 25 17 Razon Postulacion
+#-----------------------------
+cs 4 3 7 0 AN 0
+cs 4 17 2 7 AN 0
+cs 4 25 50 9 AN 0
+cs 5 25 50 59 AN 0
+cs 6 25 50 109 AN 0
+cs 7 25 50 159 AN 0
+cs 8 25 50 209 AN 0
+cs 9 25 50 259 AN 0
+cs 10 25 50 309 AN 0
+cs 11 25 50 359 AN 0
+#-----------------------------
+cs 12 3 7 409 AN 0
+cs 12 17 2 416 AN 0
+cs 12 25 50 418 AN 0
+cs 13 25 50 468 AN 0
+cs 14 25 50 518 AN 0
+cs 15 25 50 568 AN 0
+cs 16 25 50 618 AN 0
+cs 17 25 50 668 AN 0
+cs 18 25 50 718 AN 0
+cs 19 25 50 768 AN 0
+#-----------------------------
+cs 20 3 7 818 AN 0
+cs 20 17 2 825 AN 0
+cs 20 25 50 827 AN 0
+cs 21 25 50 877 AN 0
+cs 22 25 50 927 AN 0
+cs 23 25 50 977 AN 0
+cs 24 25 50 1027 AN 0
+cs 25 25 50 1077 AN 0
+cs 26 25 50 1127 AN 0
+cs 27 25 50 1177 AN 0
+ff

@@ -10,3 +10,7 @@ cs y x L pos (tx_out) AN 0
 cm y x Lmax pos (tx_out)
 tm cod L texto
 ff (fin)
+
+
+#-------
+delq tx_id

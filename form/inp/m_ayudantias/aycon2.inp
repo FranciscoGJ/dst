@@ -1,5 +1,5 @@
-#Consulta 0
-ID aycon2 050412 tx_in tx_out
+#Consultar Postulaciones 2
+ID aycon2 160135 tx_in tx_out
 #
 opc debug
 ct inv

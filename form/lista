@@ -5,12 +5,15 @@ Modulo Tareas
 	Descargar Tareas 	(tades)
 
 Modulo Postulacion a Ayudantias
-	Levantar Solicitud 				(aylev)
-	Enviar Solicitud 				(ayenv)
-	Consultar Postulciones 			(aycon)
-	Seleccionar Ayudabte 			(aysel)
+	Levantar Solicitud 				(aylev)	#
+	Eliminar Solicitud 				(ayelis)6
+	Enviar Postulacion 				(ayenv)	1
+	Actualizar Postulacion 			(ayactp)4
+	Eliminar Postulacion 			(ayelip)5
+	Consultar estado de postulacion	(ayconp)3
+	Consultar Postulaciones 		(aycon)	2
+	Seleccionar Ayudante			(aysel)	7
 	Notificar Seleccionados 		(aynot)
-	Consultar estado de postulacion	(ayest)
 
 Modulo Postulacion a Practica
 	Enviar formulario de práctica 	(prenv)

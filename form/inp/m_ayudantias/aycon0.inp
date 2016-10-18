@@ -1,9 +1,17 @@
-#Consulta 0
-ID aycon0 050410 tx_in tx_out
+#Consultar Postulaciones 0
+ID aycon0 160133 9 0
 #
 opc debug
 ct inv
 #
 fa aycon1 aycon2
 #
-fs y x
+fs 1 20
+box 0 0 10 30
+#-----------------------------
+cf 4 4 12 Codigo Curso
+ce 5 4 7 0 AN 0
+cf 5 12 1 -
+ce 5 13 2 7 AN 0
+#-----------------------------
+
