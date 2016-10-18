@@ -1,0 +1,9 @@
+#Consulta 0
+ID aycon0 050410 tx_in tx_out
+#
+opc debug
+ct inv
+#
+fa aycon1 aycon2
+#
+fs y x

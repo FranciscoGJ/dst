@@ -1,0 +1,29 @@
+#Calculadora Transaccional
+ID calcul 160120 11 12
+
+
+opc debug
+ct inv
+
+fs 1 20
+fa histor
+box 0 0 16 30
+box 3 4 8 20
+cf 1 6 11 CALCULADORA
+cf 4 6 3 OP1
+cf 6 6 8 Operador
+cf 8 6 3 OP2
+ce 4 16 5 1 AN 0
+ce 6 16 1 0 AN 0
+ce 8 16 5 6 AN 0
+cf 11 6 4 RES:
+cs 11 11 10 0 AN 0
+cm 13 6 20 10
+tm 01 17 Operacion Exitosa 
+tm 02 20 No Se Enviaron Datos
+tm 03 18 Error en los Datos
+tm 04 17 Division por Cero
+tm 05 16 Operador Erroneo
+tm 06 20 Operadores Invalidos
+tm 07 20 Operaciones Exitosas
+ff

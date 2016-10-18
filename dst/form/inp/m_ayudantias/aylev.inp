@@ -1,9 +1,9 @@
-#Seleccionar Ayudante
+#Levantar Solicitud
 ID aylev 160130 14 16
 opc debug
 ct inv
 fs 1 20
-box 0 0 20 30
+box 0 0 15 30
 cf 2 2 18 Levantar Solicitud
 cf 4 4 12 Codigo Curso
 cf 5 12 1 -

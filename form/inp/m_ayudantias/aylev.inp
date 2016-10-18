@@ -1,22 +1,31 @@
 #Levantar Solicitud
 ID aylev 160130 14 16
+#
 opc debug
 ct inv
-fs 1 20
-box 0 0 15 30
-cf 2 2 18 Levantar Solicitud
-#----------------------------
+#
+fs 1 40
+box 0 0 15 50
+cf 2 2 18 LEVANTAR SOLICITUD
+#---------------------------
 cf 4 4 12 Codigo Curso
 ce 5 4 7 0 AN 0
 cf 5 12 1 -
 ce 5 13 2 7 AN 0
-#----------------------------
+#---------------------------
 cf 7 4 15 Codigo Semestre
 ce 8 4 4 9 AN 0
 cf 8 8 1 -
 ce 8 9 1 13 AN 0
-#----------------------------
-cs 10 4 14 0 AN 0
-cm 12 4 20 14
-tm 01 16 Solicitud Creada
+#---------------------------
+cf 10 4 14 ID Postulacion
+cs 10 19 14 0 AN 0
+#---------------------------
+cm 12 4 27 14
+tm 00 5 Error
+tm 01 27 Solicitud Creadad Con Exito
+tm 02 24 Error Curso no Existente
+tm 03 25 Error Seccion Inexistente
+tm 04 21 Error Anno Incorrecto
+tm 05 25 Error Semestre Incorrecto
 ff

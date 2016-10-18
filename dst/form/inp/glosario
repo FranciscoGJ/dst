@@ -1,0 +1,12 @@
+ID nom cod tx_in tx_out
+opc debug
+ct inv
+fs y x (form sig.)
+fa nombres (form. alt)
+box y x ly lx
+cf y x L text (c. fijo)
+ce y x L pos (tx_in) AN 0
+cs y x L pos (tx_out) AN 0
+cm y x Lmax pos (tx_out)
+tm cod L texto
+ff (fin)
