@@ -45,6 +45,7 @@ def proceso(aci,tx_in,tx_out,tx_sa):
     data["rut"] = tx_in[9:][:9]
     data["id"] = verif["id"] + data["rut"]
     data["motivo"] = tx_in[18:]
+    data["status"] = "Pendiente"
 
     respuesta = cola.enviar(data)
 

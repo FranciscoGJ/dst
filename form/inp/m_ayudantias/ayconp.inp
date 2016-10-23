@@ -1,0 +1,31 @@
+#Consultar Estado Postulacion
+ID aycop 16036 515 25
+opc debug
+ct inv
+fs 1 40
+box 0 0 25 60
+cf 2 2 28 Consultar Estado Postulacion
+#---------------------------
+cf 4 4 12 Codigo Curso
+ce 5 4 7 0 AN 0
+cf 5 12 1 -
+ce 5 13 2 7 AN 0
+#---------------------------
+cf 7 4 14 Rut Postulante
+ce 8 4 8 9 AN 0
+cf 8 12 1 -
+ce 8 13 1 17 AN 0
+#--------------------------
+
+#-------------------------
+cf 20 4 14 ID Postulacion
+cs 20 19 23 0 AN 0
+#------------------------
+cm 22 4 27 23
+tm 99 5 Error
+tm 01 27 Solicitud Enviada Con Exito
+tm 02 25 Error Curso Inexistente
+tm 03 21 Error Rut
+tm 04 25 Error Justificación Vacia
+tm 05 24 Error Curso sin Vacantes
+ff

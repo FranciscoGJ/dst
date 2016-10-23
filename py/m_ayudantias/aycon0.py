@@ -2,6 +2,8 @@ from datetime import datetime
 
 from dst import *
 
+limit = 4
+
 def proceso(aci,tx_in,tx_out,tx_sa):
 
     if len(tx_in) != 9:
@@ -12,10 +14,6 @@ def proceso(aci,tx_in,tx_out,tx_sa):
         tx_out = "99"
         return {'tx_out':tx_out,'tx_sa':tx_sa,'aci':aci}
 
-    #verif rut
-    #if tx_in[9:].count(' ') == 400:
-    #    tx_out = generator_space(23) + ("03")
-    #    return {'tx_out':tx_out,'tx_sa':tx_sa,'aci':aci}
 
     cola = Cola_mensajes()
 
@@ -35,21 +33,24 @@ def proceso(aci,tx_in,tx_out,tx_sa):
         tx_out = "02"
         return {'tx_out':tx_out,'tx_sa':tx_sa,'aci':aci}
 
-    aci = "1"
-
     data = {}
     data["modo"] = "aycon0"
     data["solicitud_id"] = verif["id"]
+    data["offset"] = 0
+    data["limit"] = limit
 
     respuesta = cola.enviar(data)
 
-    print respuesta
+    print respuesta["total"],respuesta["start"],respuesta["end"]
 
-    from time import sleep
-    sleep(25)
+    aci = "aycon001"
+
+    tx_sa = "%s|%s|%s|%s"%(data["solicitud_id"],respuesta["total"],respuesta["start"],respuesta["end"])
+
+    tx_out = "%s%s"%(respuesta["code"],tx_sa[:9])
+
+    for result in respuesta["result"]:
+        tx_out = tx_out + result["rut"] + result["motivo"]
 
 
-
-    tx_out = ""
-    print tx_out
     return {'tx_out':tx_out,'tx_sa':tx_sa,'aci':aci}

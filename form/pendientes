@@ -1,0 +1,33 @@
+Consultar estado de postulación (ayconp)
+	Entradas: rut postulante, codigo de curso, codigo de sección
+	Salidas: razón de postulación, estado de postulación (pendiente, aceptado o rechazado)
+
+	Se verifica la existencia del curso y la existencia de la postulación. Si son reales, despliega la info.
+
+Actualizar postulación (ayacp)
+	Entrada1: rut postulante, codigo de curso, codigo de sección.
+	Salida1: Razón de  postulación
+	
+	Entrada2: Nueva razón de postulación
+	Salida2: Confirmación.
+
+	Se verifica si el curso y la postulación existen, y si la postulación existente está pendiente.
+	Si pasa la verificación, se devuelve la razón de postulación. Esto se hace a un nuevo formulario, donde la nueva entrada será la nueva razón de postulación, y la salida será una confirmación de que se hizo correctamente la actualización. Esto va a ncesitar 2 formularios y 2 procesos.
+
+Eliminar Postulación (ayelip)
+	Entrada: rut postulante, codigo curso, codigo sección
+	Salida: confirmación.
+
+	Lo ideal sería que se pudiera visualizar la postulación y despues recibir la opción de borrar o no, o sea que se vea el consultar y despues el borrar. Eso debería tomar 2 formularios, pero quizas un sólo proceso.
+
+Eliminar Solicitud (ayelis)
+	Entrada: codigo curso, codigo sección, año, semestre
+	Salida: confirmación.
+
+	Verifica si existe el curso, si tiene postulación, y verifica si no está resuelta. Si está resuelta no debería borrarla (?)
+
+Seleccionar Ayudante (aysel)
+	Entrada: codigo de curso, codigo de sección, año, semestre, rut postulante
+	Salida: Verificación
+
+	Verifica si existe curso, si hay solicitud para ese curso y si existe postulación con ese rut. Lo ideal sería que me muestre la postulación antes de pedirme una verificación para seleccionar al ayudante o no. 

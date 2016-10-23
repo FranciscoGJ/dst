@@ -1,61 +1,64 @@
 #Consultar Postulaciones 1
-ID aycon1 160134 1 1640
+ID aycon1 160134 1 1647
 opc debug
 ct inv
 #
-fa aycon0 aycon2
+fa aycon0
 #
 fs 1 60
 box 0 0 40 80
+cs 2 17 9 2 AN 0
 cf 2 2 13 Postulaciones
-cf 3 3 12 Codigo Curso
-cf 3 17 7 Seccion
-cf 3 25 17 Razon Postulacion
+cf 3 3 3 Rut
+cf 3 15 17 Razon Postulacion
 #-----------------------------
-cs 4 3 7 0 AN 0
-cs 4 17 2 7 AN 0
-cs 4 25 50 9 AN 0
-cs 5 25 50 59 AN 0
-cs 6 25 50 109 AN 0
-cs 7 25 50 159 AN 0
-cs 8 25 50 209 AN 0
-cs 9 25 50 259 AN 0
-cs 10 25 50 309 AN 0
-cs 11 25 50 359 AN 0
+cs 4 3 9 11 AN 0
+cs 4 15 50 20 AN 0
+cs 5 15 50 70 AN 0
+cs 6 15 50 120 AN 0
+cs 7 15 50 170 AN 0
+cs 8 15 50 220 AN 0
+cs 9 15 50 270 AN 0
+cs 10 15 50 320 AN 0
+cs 11 15 50 370 AN 0
 #-----------------------------
-cs 12 3 7 409 AN 0
-cs 12 17 2 416 AN 0
-cs 12 25 50 418 AN 0
-cs 13 25 50 468 AN 0
-cs 14 25 50 518 AN 0
-cs 15 25 50 568 AN 0
-cs 16 25 50 618 AN 0
-cs 17 25 50 668 AN 0
-cs 18 25 50 718 AN 0
-cs 19 25 50 768 AN 0
+cs 12 3 9 420 AN 0
+cs 12 15 50 429 AN 0
+cs 13 15 50 479 AN 0
+cs 14 15 50 529 AN 0
+cs 15 15 50 579 AN 0
+cs 16 15 50 629 AN 0
+cs 17 15 50 679 AN 0
+cs 18 15 50 729 AN 0
+cs 19 15 50 779 AN 0
 #-----------------------------
-cs 20 3 7 818 AN 0
-cs 20 17 2 825 AN 0
-cs 20 25 50 827 AN 0
-cs 21 25 50 877 AN 0
-cs 22 25 50 927 AN 0
-cs 23 25 50 977 AN 0
-cs 24 25 50 1027 AN 0
-cs 25 25 50 1077 AN 0
-cs 26 25 50 1127 AN 0
-cs 27 25 50 1177 AN 0
+cs 20 3 9 829 AN 0
+cs 20 15 50 838 AN 0
+cs 21 15 50 888 AN 0
+cs 22 15 50 938 AN 0
+cs 23 15 50 988 AN 0
+cs 24 15 50 1038 AN 0
+cs 25 15 50 1088 AN 0
+cs 26 15 50 1138 AN 0
+cs 27 15 50 1188 AN 0
 #-----------------------------
-cs 28 3 7 1227 AN 0
-cs 28 17 2 1234 AN 0
-cs 28 25 50 1236 AN 0
-cs 29 25 50 1286 AN 0
-cs 30 25 50 1336 AN 0
-cs 31 25 50 1386 AN 0
-cs 32 25 50 1436 AN 0
-cs 33 25 50 1486 AN 0
-cs 34 25 50 1536 AN 0
-cs 35 25 50 1586 AN 0
-#-----------------------------
-cf 37 60 9 Siguiente
-ce 37 70 1 0 AN 0
+cs 28 3 9 1238 AN 0
+cs 28 15 50 1247 AN 0
+cs 29 15 50 1297 AN 0
+cs 30 15 50 1347 AN 0
+cs 31 15 50 1397 AN 0
+cs 32 15 50 1447 AN 0
+cs 33 15 50 1497 AN 0
+cs 34 15 50 1547 AN 0
+cs 35 15 50 1597 AN 0
+#----------------------------
+cf 36 60 11 Siguiente s
+cf 37 60 10 Anterior a
+ce 37 72 1 0 AN 0
+cm 37 10 24 0
+tm 99 5 Error
+tm 01 5	Exito
+tm 02 15 Opcion invalida
+tm 03 21 No hay entrada previa
+tm 04 24 No hay entrada siguiente
 ff

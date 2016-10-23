@@ -11,7 +11,7 @@ Modulo Postulacion a Ayudantias
 	Actualizar Postulacion 			(ayactp)4
 	Eliminar Postulacion 			(ayelip)5
 	Consultar estado de postulacion	(ayconp)3
-	Consultar Postulaciones 		(aycon)	2
+	Consultar Postulaciones 		(aycon)	#
 	Seleccionar Ayudante			(aysel)	7
 	Notificar Seleccionados 		(aynot)
 

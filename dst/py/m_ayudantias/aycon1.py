@@ -58,7 +58,6 @@ def proceso(aci,tx_in,tx_out,tx_sa):
     elif tx_in == "s":
         if total == offset:
             code = "04"
-            data["offset"] = start
             tx_sa = "%s|%s|%s|%s"%(solicitud_id,total,start,offset)
             respuesta = cola.enviar(data)
             tx_out = "%s%s"%(code,tx_sa[:9])

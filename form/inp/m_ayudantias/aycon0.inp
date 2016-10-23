@@ -4,7 +4,7 @@ ID aycon0 160133 9 2
 opc debug
 ct inv
 #
-fa aycon1 aycon2
+fa aycon1
 #
 fs 1 20
 box 0 0 10 30
