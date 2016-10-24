@@ -8,9 +8,9 @@ Modulo Postulacion a Ayudantias
 	Levantar Solicitud 				(aylev)	#
 	Eliminar Solicitud 				(ayelis)6
 	Enviar Postulacion 				(ayenv)	#
-	Actualizar Postulacion 			(ayactp)4
-	Eliminar Postulacion 			(ayelip)5
-	Consultar estado de postulacion	(ayconp)3
+	Actualizar Postulacion 			(ayactp)#
+	Eliminar Postulacion 			(ayelip)#
+	Consultar estado de postulacion	(ayconp)#
 	Consultar Postulaciones 		(aycon)	#
 	Seleccionar Ayudante			(aysel)	7
 	Notificar Seleccionados 		(aynot)	

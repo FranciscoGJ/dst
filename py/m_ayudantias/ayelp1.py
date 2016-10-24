@@ -4,32 +4,33 @@ from dst import *
 
 def proceso(aci,tx_in,tx_out,tx_sa):
 
-	if len(tx_in) != 1:
-        tx_out = "99"
-        return {'tx_out':tx_out,'tx_sa':tx_sa,'aci':aci}
-
-    elif tx_in.count(' ') == 1:
-        tx_out = "99"
-        return {'tx_out':tx_out,'tx_sa':tx_sa,'aci':aci}
-
-    if tx_in != "y" and tx_in != "n":
-    	tx_out = "02"
+	if len(tx_in) != 2:
+		tx_out = "99"
 		return {'tx_out':tx_out,'tx_sa':tx_sa,'aci':aci}
 
-	if tx_in == "y":
-	    cola = Cola_mensajes()
+	elif tx_in.count(' ') == 2:
+		tx_out = "99"
+		return {'tx_out':tx_out,'tx_sa':tx_sa,'aci':aci}
 
-	   	data = {}
-	   	data_item = {}
-	   	data["modo"] = "ayelp1"
-	   	data_item["id"] = tx_sa
-	   	data["item"] = data_item
+	if tx_in.lower() != "si" and tx_in.lower() != "no":
+		tx_out = "02"
+		return {'tx_out':tx_out,'tx_sa':tx_sa,'aci':aci}
 
-	   	respuesta = cola.enviar(data)
+	if tx_in.lower() == "si":
+		cola = Cola_mensajes()
 
-	   	tx_out = "%s%s"(generator_space(418),"01")
+		data = {}
+		data_filter = {}
+		data["modo"] = "ayelp1"
+		data_filter["id"] = tx_sa
+		data["filter"] = data_filter
 
-	elif tx_in == "n":
+		respuesta = cola.enviar(data)
+
+		tx_out = "%s%s"%(generator_space(409),"01")
+
+	elif tx_in.lower() == "no":
+
 		tx_out = "03"
 		aci = "ayelp101"
 

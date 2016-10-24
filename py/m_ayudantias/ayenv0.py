@@ -46,7 +46,6 @@ def proceso(aci,tx_in,tx_out,tx_sa):
 
     data = {}
     data_item = {}
-    data["modo"] = "ayenv0"
     data_item["curso"] = tx_in[:7]
     data_item["sec"] = tx_in[7:][:2]
     data_item["rut"] = tx_in[9:][:9]
@@ -56,10 +55,19 @@ def proceso(aci,tx_in,tx_out,tx_sa):
     data_item["id"] = verif_filter["id"] + data_item["rut"]
     data_item["motivo"] = tx_in[18:]
     data_item["status"] = "Pendiente"
-    data["item"] = data_item
+    data["filter"] = data_item
 
-    respuesta = cola.enviar(data)
+    data["modo"] = "ayconp_verif"
+    id_res = cola.enviar(data)
 
-    tx_out = "%s%s"%(respuesta["id"],respuesta["code"])
-    print tx_out
+    if id_res["postulacion"]:
+        tx_out = "%s%s"%(data["filter"]["id"],"06")
+
+    else:
+        del data["filter"]
+        data["item"] = data_item
+        data["modo"] = "ayenv0"
+        respuesta = cola.enviar(data)
+        tx_out = "%s%s"%(respuesta["id"],respuesta["code"])
+
     return {'tx_out':tx_out,'tx_sa':tx_sa,'aci':aci}

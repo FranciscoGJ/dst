@@ -16,13 +16,15 @@ def proceso(aci,tx_in,tx_out,tx_sa):
 
 	data = {}
 	data_filter = {}
+	data_item = {}
 	data["modo"] = "ayacp1"
 	data_filter["id"] = tx_sa
-	data_filter["motivo"] = tx_in
+	data_item["motivo"] = tx_in
+	data["item"] = data_item
 	data["filter"] = data_filter
 
 	respuesta = cola.enviar(data)
 
-	tx_out = "%s%s%s"%(generator_space(409),respuesta["code"])
+	tx_out = "%s%s"%(generator_space(409),"01")
 	tx_sa = ""
 	return {'tx_out':tx_out,'tx_sa':tx_sa,'aci':aci}
