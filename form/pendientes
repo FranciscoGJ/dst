@@ -1,26 +1,11 @@
 Consultar estado de postulación (ayconp)# resultado unico
 	Entradas: rut postulante, codigo de curso, codigo de sección
-	Ojo mandar el id directamente ya que acceder por el indice es m´ás rapido para la base de datos
-	
-	
-	filter={}
-	filter['id']=id
-	pregunta data['filter']=filter
-	
 	Salidas: razón de postulación, estado de postulación (pendiente, aceptado o rechazado)
 	
-	objeto
-
 	Se verifica la existencia del curso y la existencia de la postulación. Si son reales, despliega la info.
 
 Actualizar postulación (ayacp) # resultado unico
 	Entrada1: rut postulante, codigo de curso, codigo de sección.
-
-	data['motivo']='cambios'
-	filter={}
-	filter['id']=id
-	pregunta data['filter']=filter
-	
 	Salida1: Razón de  postulación
 	
 
@@ -46,7 +31,7 @@ Eliminar Solicitud (ayelis)
 	Verifica si existe el curso, si tiene postulación, y verifica si no está resuelta. Si está resuelta no debería borrarla (?)
 
 Seleccionar Ayudante (aysel)
-  #busqueda unica debo mandarlo con el id
+  #busqueda unica
   
   
 	Entrada: codigo de curso, codigo de sección, año, semestre, rut postulante

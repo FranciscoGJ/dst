@@ -5,11 +5,11 @@ from dst import *
 def proceso(aci,tx_in,tx_out,tx_sa):
 
 	if len(tx_in) != 18:
-        tx_out = generator_space(411)+"99"
+        tx_out = "99"
         return {'tx_out':tx_out,'tx_sa':tx_sa,'aci':aci}
 
     elif tx_in.count(' ') == 18:
-        tx_out = generator_space(411)+"99"
+        tx_out = "99"
         return {'tx_out':tx_out,'tx_sa':tx_sa,'aci':aci}
  	
  	cola = Cola_mensajes()
@@ -24,11 +24,11 @@ def proceso(aci,tx_in,tx_out,tx_sa):
     verif_res = cola.enviar(verif)
 
     if not verif_res["existe"]:
-        tx_out = generator_space(411) + ("02")
+        tx_out = "02"
         return {'tx_out':tx_out,'tx_sa':tx_sa,'aci':aci}
 
     elif not verif_res["postulacion"]:
-        tx_out = generator_space(411) + ("03")
+        tx_out = "03"
         return {'tx_out':tx_out,'tx_sa':tx_sa,'aci':aci}
 
     data = {}

@@ -16,38 +16,39 @@ def proceso(aci,tx_in,tx_out,tx_sa):
 
 
     data = {}
-    filt = {}
-    data["modo"] = "ayslev"
+    data_filter = {}
+    data["modo"] = "aylev"
 
 
-    filt["cod_curso"]=tx_in[0:][:7]
+    data_filter["cod_curso"]=tx_in[0:][:7]
 
-    if filt["cod_curso"][3:].isdigit() == False:
+    if data_filter["cod_curso"][3:].isdigit() == False:
         tx_out = generator_space(14) + ("02")
         return {'tx_out':tx_out,'tx_sa':tx_sa,'aci':aci}
 
-    filt["cod_seccion"]=tx_in[7:][:2]
+    data_filter["cod_seccion"]=tx_in[7:][:2]
 
-    if filt["cod_seccion"].isdigit() == False:
+    if data_filter["cod_seccion"].isdigit() == False:
         tx_out = generator_space(14)+ ("03")
         return {'tx_out':tx_out,'tx_sa':tx_sa,'aci':aci}
 
-    filt["cod_ano"]=tx_in[9:][:4]
+    data_filter["cod_ano"]=tx_in[9:][:4]
 
     hoy = datetime.now()
-    if filt["cod_ano"].isdigit():
-        if int(filt["cod_ano"]) > hoy.year or int(filt["cod_ano"]) < 2010:
+    if data_filter["cod_ano"].isdigit():
+        if int(data_filter["cod_ano"]) > hoy.year or int(data_filter["cod_ano"]) < 2010:
             tx_out = generator_space(14)+ ("04")
             return {'tx_out':tx_out,'tx_sa':tx_sa,'aci':aci}
 
-    filt["cod_sem"]=tx_in[13]
+    data_filter["cod_sem"]=tx_in[13]
 
-    if filt["cod_sem"] != "1" and filt["cod_sem"] != "2":
+    if data_filter["cod_sem"] != "1" and data_filter["cod_sem"] != "2":
         tx_out = generator_space(14)+ ("05")
         return {'tx_out':tx_out,'tx_sa':tx_sa,'aci':aci}
 
     cola = Cola_mensajes()
-    data["filter"] = filt
+    data_filter["status"] = "Pendiente"
+    data["filter"] = data_filter
 
     respuesta = cola.enviar(data)
 

@@ -1,9 +1,10 @@
 #Actualizar Postulacion
-ID ayactp3 16037 18 2
+ID ayacp0 16037 18 2
 opc debug
 ct inv
 fs 1 20
-box 0 0 25 80
+fa ayacp1
+box 0 0 15 40
 cf 2 2 22 Actualizar Postulacion
 #---------------------------
 cf 4 4 12 Codigo Curso
