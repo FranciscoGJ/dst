@@ -1,0 +1,41 @@
+#Eliminar Solicitud
+ID ayels1 160143 2 29
+opc debug
+ct inv
+fs 1 70
+fa ayels0
+box 0 0 15 80
+#----------------------
+cf 2 2 18 Eliminar Solicitud
+#---------------------------
+cf 4 4 12 Codigo Curso
+cf 4 16 1 |
+cf 5 16 1 |
+cs 5 4 7 0 AN 0
+cf 5 11 1 -
+cs 5 12 2 7 AN 0
+#---------------------------
+cf 4 17 15 Codigo Semestre
+cf 4 32 1 |
+cf 5 32 1 |
+cs 5 17 4 9 AN 0
+cf 5 21 1 -
+cs 5 22 1 13 AN 0
+#---------------------------
+cf 4 33 16 Estado Solicitud
+cf 4 49 1 |
+cf 5 49 1 |
+cs 5 33 9 14 AN 0
+#---------------------------
+cf 4 50 25 Cantidad De Postulaciones
+cs 5 50 4 23 AN 0
+#---------------------------
+cf 7 4 19 Elminiar Solicitud?
+cf 8 4 2 Si
+cf 9 4 2 No
+ce 9 7 2 0 AN 0
+#---------------------------
+cm 10 4 17 27
+tm 99 5 Error
+tm 02 17 Opcion Incorrecta
+ff

@@ -1,3 +1,3 @@
-from m_ayudantias.ayenv0 import proceso
+from m_ayudantias.aysela import proceso
 
-print proceso("ayenv0","","","")
+print proceso("","cit10000120162184068702","","")
