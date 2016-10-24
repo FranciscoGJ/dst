@@ -41,8 +41,6 @@ def proceso(aci,tx_in,tx_out,tx_sa):
 
     respuesta = cola.enviar(data)
 
-    print respuesta["total"],respuesta["start"],respuesta["end"]
-
     aci = "aycon001"
 
     tx_sa = "%s|%s|%s|%s"%(data["solicitud_id"],respuesta["total"],respuesta["start"],respuesta["end"])

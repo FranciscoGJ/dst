@@ -24,9 +24,14 @@ def proceso(aci,tx_in,tx_out,tx_sa):
     cola = Cola_mensajes()
 
     verif = {}
+    verif_filt = {}
     verif["modo"] = "ayenv0_verif"
     hoy=datetime.now()
-    verif["id"] = tx_in[:9]+"%s%s"%(hoy.year,int(hoy.month/6)+1)
+    verif_filt["cod_curso"] = tx_in[:7]
+    verif_filt["cod_sec"] = tx_in[7:][:2]
+    verif_filt["cod_ano"] = "%s"%(hoy.year)
+    verif_filt["cod_sem"] = "%s"%(int(hoy.month/6)+1)
+    verif["filt"] = verif_filt
 
     verif_res = cola.enviar(verif)
 

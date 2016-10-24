@@ -13,7 +13,7 @@ Modulo Postulacion a Ayudantias
 	Consultar estado de postulacion	(ayconp)3
 	Consultar Postulaciones 		(aycon)	#
 	Seleccionar Ayudante			(aysel)	7
-	Notificar Seleccionados 		(aynot)
+	Notificar Seleccionados 		(aynot)	
 
 Modulo Postulacion a Practica
 	Enviar formulario de práctica 	(prenv)
