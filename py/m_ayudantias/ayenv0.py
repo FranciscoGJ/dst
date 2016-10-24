@@ -24,14 +24,15 @@ def proceso(aci,tx_in,tx_out,tx_sa):
     cola = Cola_mensajes()
 
     verif = {}
-    verif_filt = {}
+    verif_filter = {}
     verif["modo"] = "ayenv0_verif"
     hoy=datetime.now()
-    verif_filt["cod_curso"] = tx_in[:7]
-    verif_filt["cod_sec"] = tx_in[7:][:2]
-    verif_filt["cod_ano"] = "%s"%(hoy.year)
-    verif_filt["cod_sem"] = "%s"%(int(hoy.month/6)+1)
-    verif["filt"] = verif_filt
+    verif_filter["curso"] = tx_in[:7]
+    verif_filter["sec"] = tx_in[7:][:2]
+    verif_filter["ano"] = "%s"%(hoy.year)
+    verif_filter["sem"] = "%s"%(int(hoy.month/6)+1)
+    verif_filter["id"] = "%s%s%s"%(tx_in[:9],hoy.year,int(hoy.month/6)+1)
+    verif["filter"] = verif_filter
 
     verif_res = cola.enviar(verif)
 
@@ -44,13 +45,18 @@ def proceso(aci,tx_in,tx_out,tx_sa):
         return {'tx_out':tx_out,'tx_sa':tx_sa,'aci':aci}
 
     data = {}
+    data_item = {}
     data["modo"] = "ayenv0"
-    data["curso"] = tx_in[:7]
-    data["seccion"] = tx_in[7:][:2]
-    data["rut"] = tx_in[9:][:9]
-    data["id"] = verif["id"] + data["rut"]
-    data["motivo"] = tx_in[18:]
-    data["status"] = "Pendiente"
+    data_item["curso"] = tx_in[:7]
+    data_item["sec"] = tx_in[7:][:2]
+    data_item["rut"] = tx_in[9:][:9]
+    data_item["ano"] = "%s"%(hoy.year)
+    data_item["sem"] = "%s"%(int(hoy.month/6)+1)
+    data_item["solicitud_id"] = verif_filter["id"]
+    data_item["id"] = verif_filter["id"] + data_item["rut"]
+    data_item["motivo"] = tx_in[18:]
+    data_item["status"] = "Pendiente"
+    data["item"] = data_item
 
     respuesta = cola.enviar(data)
 

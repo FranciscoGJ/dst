@@ -1,12 +1,12 @@
-#Actualizar Postulacion
-ID ayacp0 160137 18 2
+#Eliminar Postulacion
+ID ayelp0 160139 18 2
 opc debug
 ct inv
 fs 1 20
-fa ayacp1
+fa ayelp1
 box 0 0 15 40
-cf 2 2 22 Actualizar Postulacion
-#---------------------------
+cf 2 2 20 Eliminar Postulacion
+#----------------------
 cf 4 4 12 Codigo Curso
 ce 5 4 7 0 AN 0
 cf 5 12 1 -
@@ -17,9 +17,9 @@ ce 8 4 8 9 AN 0
 cf 8 12 1 -
 ce 8 13 1 17 AN 0
 #---------------------------
-cm 22 4 27 0
 tm 99 5 Error
 tm 01 5 Exito
 tm 02 17 Curso Inexistente
 tm 03 23 Postulacion Inexistente
+tm 04 15 Rut Inexistente
 ff

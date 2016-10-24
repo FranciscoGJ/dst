@@ -1,10 +1,10 @@
 #Consultar Estado Postulacion
-ID ayacp1 16038 200 220
+ID ayacp1 160138 400 411
 opc debug
 ct inv
 fs 1 40
 fa ayacp0
-box 0 0 25 80
+box 0 0 27 80
 cf 2 2 22 Actualizar Postulacion
 #---------------------------
 cf 4 4 12 Codigo Curso
@@ -14,17 +14,26 @@ cf 4 17 7 Seccion
 cs 5 17 2 7 AN 0
 #---------------------------
 cf 4 25 17 Razon Postulacion
-cs 12 25 50 9 AN 0
-cs 13 25 50 59 AN 0
-cs 14 25 50 109 AN 0
-cs 15 25 50 159 AN 0	
+cs 5 25 50 9 AN 0
+cs 6 25 50 59 AN 0
+cs 7 25 50 109 AN 0
+cs 8 25 50 159 AN 0
+cs 9 25 50 209 AN 0
+cs 10 25 50 259 AN 0
+cs 11 25 50 309 AN 0
+cs 12 25 50 359 AN 0
 #---------------------------
 cf 16 4 12 Modificacion
 ce 16 25 50 0 AN 0
 ce 17 25 50 50 AN 0
 ce 18 25 50 100 AN 0
 ce 19 25 50 150 AN 0
+ce 20 25 50 200 AN 0
+ce 21 25 50 250 AN 0
+ce 22 25 50 300 AN 0
+ce 23 25 50 350 AN 0
 #---------------------------
+cm 25 4 23 409
 tm 99 5 Error
 tm 01 5 Exito
 tm 02 17 Curso Inexistente

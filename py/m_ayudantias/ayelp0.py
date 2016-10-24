@@ -17,7 +17,11 @@ def proceso(aci,tx_in,tx_out,tx_sa):
  	hoy = datetime.now()
     verif = {}
     verif_filter = {}
-    verif["modo"] = "ayelp0_verif" 
+
+    verif["modo"] = "ayconp_verif"
+
+    verif_filter["curso"] = tx_in[:7]
+    verif_filter["sec"] = tx_in[7:][:2]
     verif_filter["id"] = tx_in[:9] + "%s%s"%(hoy.year,int(hoy.month/6)+1) + tx_in[:9]
     verif["filter"] = verif_filter
 
@@ -29,6 +33,10 @@ def proceso(aci,tx_in,tx_out,tx_sa):
 
     elif not verif_res["postulacion"]:
         tx_out = "03"
+        return {'tx_out':tx_out,'tx_sa':tx_sa,'aci':aci}
+
+    elif verif_res["status"] != "Pendiente":
+        tx_out = "04"
         return {'tx_out':tx_out,'tx_sa':tx_sa,'aci':aci}
 
     data = {}

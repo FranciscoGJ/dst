@@ -20,10 +20,10 @@ def proceso(aci,tx_in,tx_out,tx_sa):
 	    cola = Cola_mensajes()
 
 	   	data = {}
-	   	data_filter = {}
+	   	data_item = {}
 	   	data["modo"] = "ayelp1"
-	   	data_filter["id"] = tx_sa
-	   	data["filter"] = data_filter
+	   	data_item["id"] = tx_sa
+	   	data["item"] = data_item
 
 	   	respuesta = cola.enviar(data)
 

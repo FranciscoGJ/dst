@@ -1,5 +1,5 @@
 #Consultar Estado Postulacion
-ID ayconp 16036 18 220
+ID ayconp 10136 18 420
 opc debug
 ct inv
 fs 1 40
@@ -26,12 +26,16 @@ cf 10 25 17 Razon Postulacion
 cs 12 25 50 9 AN 0
 cs 13 25 50 59 AN 0
 cs 14 25 50 109 AN 0
-cs 15 25 50 159 AN 0	
+cs 15 25 50 159 AN 0
+cs 16 25 50 209 AN 0
+cs 17 25 50 259 AN 0
+cs 18 25 50 309 AN 0
+cs 19 25 50 359 AN 0
 #---------------------------
 cf 17 4 16 Estado Solicitud
-cs 17 15 9 209 AN 0
+cs 17 21 9 409 AN 0
 #---------------------------
-cm 22 4 27 218
+cm 22 4 27 418
 tm 99 5 Error
 tm 01 5 Exito
 tm 02 17 Curso Inexistente

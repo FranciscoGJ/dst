@@ -19,9 +19,12 @@ def proceso(aci,tx_in,tx_out,tx_sa):
 
     hoy = datetime.now()
     verif = {}
-    verif["modo"] = "ayenv0_verif"
-    verif["id"] = tx_in + "%s%s"%(hoy.year,int(hoy.month/6)+1)
-
+    verif_filter = {}
+    verif["modo"] = "aycon0_verif"
+    verif_filter["curso"] = tx_in[:7]
+    verif_filter["sec"] = tx_in[7:][:2]
+    verif_filter["id"] = tx_in + "%s%s"%(hoy.year,int(hoy.month/6)+1)
+    verif["filter"] = verif_filter
 
     verif_res = cola.enviar(verif)
 
@@ -34,8 +37,10 @@ def proceso(aci,tx_in,tx_out,tx_sa):
         return {'tx_out':tx_out,'tx_sa':tx_sa,'aci':aci}
 
     data = {}
+    data_filter = {}
     data["modo"] = "aycon0"
-    data["solicitud_id"] = verif["id"]
+    data_filter["solicitud_id"] = verif_filter["id"]
+    data["filter"] = data_filter
     data["offset"] = 0
     data["limit"] = limit
 
@@ -43,12 +48,11 @@ def proceso(aci,tx_in,tx_out,tx_sa):
 
     aci = "aycon001"
 
-    tx_sa = "%s|%s|%s|%s"%(data["solicitud_id"],respuesta["total"],respuesta["start"],respuesta["end"])
+    tx_sa = "%s|%s|%s|%s"%(data_filter["solicitud_id"],respuesta["total"],respuesta["start"],respuesta["end"])
 
     tx_out = "%s%s"%(respuesta["code"],tx_sa[:9])
 
     for result in respuesta["result"]:
         tx_out = tx_out + result["rut"] + result["motivo"]
-
 
     return {'tx_out':tx_out,'tx_sa':tx_sa,'aci':aci}

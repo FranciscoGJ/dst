@@ -1,11 +1,12 @@
-#Seleccionar Ayudante
-ID aysel 160143 23 2
+#Eliminar Solicitud
+ID ayelis 160142 14 2
 opc debug
 ct inv
 fs 1 20
-box 0 0 15 30
-cf 2 2 20 Seleccionar Ayudante
-#----------------------------
+box 0 0 15 40
+#----------------------
+cf 2 2 18 Eliminar Solicitud
+#---------------------------
 cf 4 4 12 Codigo Curso
 ce 5 4 7 0 AN 0
 cf 5 12 1 -
@@ -16,18 +17,11 @@ ce 8 4 4 9 AN 0
 cf 8 8 1 -
 ce 8 9 1 13 AN 0
 #---------------------------
-cf 9 4 14 Rut Postulante
-ce 10 4 8 14 AN 0
-cf 10 12 1 -
-ce 10 13 1 22 AN 0
-#---------------------------
 cm 9 4 27 0
 tm 00 5 Error
-tm 01 27 Exito
+tm 01 27 Solicitud Eliminada Con Exito
 tm 02 24 Error Curso no Existente
 tm 03 25 Error Seccion Inexistente
 tm 04 21 Error Anio Incorrecto
 tm 05 25 Error Semestre Incorrecto
-tm 06 23 Postulacion Inexistente
-tm 07 15 Rut Inexistente
 ff

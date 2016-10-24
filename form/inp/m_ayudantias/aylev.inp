@@ -5,7 +5,7 @@ opc debug
 ct inv
 #
 fs 1 40
-box 0 0 15 50
+box 0 0 15 60
 cf 2 2 18 LEVANTAR SOLICITUD
 #---------------------------
 cf 4 4 12 Codigo Curso

@@ -30,8 +30,10 @@ def proceso(aci,tx_in,tx_out,tx_sa):
     cola = Cola_mensajes()
     
     data = {}
-    data["modo"] = "aycon1"
-    data["solicitud_id"] = solicitud_id
+    data_filter = {}
+    data["modo"] = "aycon0"
+    data_filter["solicitud_id"] = solicitud_id
+    data["filter"] = data_filter
     data["limit"] = limit
  
     print "1!"
@@ -53,7 +55,7 @@ def proceso(aci,tx_in,tx_out,tx_sa):
             tx_out = "%s%s"%(code,tx_sa[:9])
             for result in respuesta["result"]:
                 tx_out = tx_out + result["rut"] + result["motivo"]
-            tx_sa = "%s|%s|%s|%s"%(data["solicitud_id"],respuesta["total"],respuesta["start"],respuesta["end"])
+            tx_sa = "%s|%s|%s|%s"%(data_filter["solicitud_id"],respuesta["total"],respuesta["start"],respuesta["end"])
             
     elif tx_in == "s":
         if total == offset:
@@ -72,7 +74,7 @@ def proceso(aci,tx_in,tx_out,tx_sa):
             tx_out = "%s%s"%(code,tx_sa[:9])
             for result in respuesta["result"]:
                 tx_out = tx_out + result["rut"] + result["motivo"]
-            tx_sa = "%s|%s|%s|%s"%(data["solicitud_id"],respuesta["total"],respuesta["start"],respuesta["end"])    
+            tx_sa = "%s|%s|%s|%s"%(data_filter["solicitud_id"],respuesta["total"],respuesta["start"],respuesta["end"])
 
     print "2!"
     return {'tx_out':tx_out,'tx_sa':tx_sa,'aci':aci}
