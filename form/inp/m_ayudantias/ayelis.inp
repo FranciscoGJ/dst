@@ -1,6 +1,6 @@
 #Eliminar Solicitud
 ID ayelis 160142 14 2
-opc debug
+#opc debug
 ct inv
 fs 1 20
 box 0 0 15 40

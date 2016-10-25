@@ -1,10 +1,10 @@
 #Eliminar Postulacion
 ID ayelp1 160140 2 411
-opc debug
+#opc debug
 ct inv
 fs 1 70
 fa ayelp0
-box 0 0 20 80
+box 0 0 22 80
 cf 2 2 20 Eliminar Postulacion
 #----------------------------
 cf 4 4 12 Codigo Curso
@@ -28,8 +28,8 @@ cf 17 4 2 Si
 cf 18 4 2 No
 ce 18 7 2 0 AN 0
 #--------------------------
-cm 19 4 21 409
+cm 19 4 17 409
 tm 99 5 Error
-tm 03 21 Postulacion Eliminada
 tm 02 17 Opcion Incorrecta
+tm 03 1 .
 ff

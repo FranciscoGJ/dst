@@ -1,6 +1,6 @@
 #Eliminar Postulacion
 ID ayelp0 160139 18 2
-opc debug
+#opc debug
 ct inv
 fs 1 20
 fa ayelp1
@@ -19,7 +19,7 @@ ce 8 13 1 17 AN 0
 #---------------------------
 cm 10 4 23 0
 tm 99 5 Error
-tm 01 5 Exito
+tm 01 21 Postulacion Eliminada
 tm 02 17 Curso Inexistente
 tm 03 23 Postulacion Inexistente
 tm 04 15 Rut Inexistente

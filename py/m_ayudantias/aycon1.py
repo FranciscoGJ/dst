@@ -17,7 +17,7 @@ def proceso(aci,tx_in,tx_out,tx_sa):
     if tx_in != "s" and tx_in != "a":
         tx_out = "02"+generator_space(1645)
         return {'tx_out':tx_out,'tx_sa':tx_sa,'aci':aci}
-    print "0!"
+    #print "0!"
     tx_sa_arr = tx_sa.split("|")
 
     solicitud_id = tx_sa_arr[0]
@@ -36,7 +36,7 @@ def proceso(aci,tx_in,tx_out,tx_sa):
     data["filter"] = data_filter
     data["limit"] = limit
  
-    print "1!"
+    #print "1!"
     if tx_in == "a":
         if start == 0:
             code = "03"
@@ -76,5 +76,5 @@ def proceso(aci,tx_in,tx_out,tx_sa):
                 tx_out = tx_out + result["rut"] + result["motivo"]
             tx_sa = "%s|%s|%s|%s"%(data_filter["solicitud_id"],respuesta["total"],respuesta["start"],respuesta["end"])
 
-    print "2!"
+    #print "2!"
     return {'tx_out':tx_out,'tx_sa':tx_sa,'aci':aci}

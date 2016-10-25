@@ -27,7 +27,8 @@ def proceso(aci,tx_in,tx_out,tx_sa):
 
 		respuesta = cola.enviar(data)
 
-		tx_out = "%s%s"%(generator_space(409),"01")
+		aci = "ayelp101"
+		tx_out = "01"
 
 	elif tx_in.lower() == "no":
 

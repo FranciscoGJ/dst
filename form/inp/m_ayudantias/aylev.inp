@@ -1,7 +1,7 @@
 #Levantar Solicitud
 ID ayslev 160130 14 16
 #
-opc debug
+#opc debug
 ct inv
 #
 fs 1 40

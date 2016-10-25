@@ -61,7 +61,7 @@ def proceso(aci,tx_in,tx_out,tx_sa):
 
     tx_sa = data_filter["id"]
 
-    tx_out = "%s%s%s"%(tx_in[:9],respuesta["motivo"],"01")
+    tx_out = "%s%s%s"%(tx_in[:9],respuesta["motivo"],"03")
 
     return {'tx_out':tx_out,'tx_sa':tx_sa,'aci':aci}
 

@@ -1,6 +1,6 @@
 #Consultar Postulaciones 2
 ID aycon2 160135 0 1640
-opc debug
+#opc debug
 ct inv
 #
 fa aycon0 aycon1

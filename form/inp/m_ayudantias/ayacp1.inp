@@ -1,6 +1,6 @@
 #Consultar Estado Postulacion
 ID ayacp1 160138 400 411
-opc debug
+#opc debug
 ct inv
 fs 1 40
 fa ayacp0

@@ -1,6 +1,6 @@
 #Eliminar Solicitud
 ID ayels0 160142 14 2
-opc debug
+#opc debug
 ct inv
 fs 1 20
 fa ayels1

@@ -3,7 +3,7 @@ from datetime import datetime
 from dst import *
 
 def proceso(aci,tx_in,tx_out,tx_sa):
-    print tx_in
+    #print tx_in
     if len(tx_in) < 14:
         tx_out = generator_space(14)+ ("00")
         return {'tx_out':tx_out,'tx_sa':tx_sa,'aci':aci}

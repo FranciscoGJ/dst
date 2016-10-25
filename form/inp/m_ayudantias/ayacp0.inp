@@ -1,6 +1,6 @@
 #Actualizar Postulacion
 ID ayacp0 160137 18 2
-opc debug
+#opc debug
 ct inv
 fs 1 20
 fa ayacp1

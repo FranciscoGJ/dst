@@ -1,6 +1,6 @@
 #Enviar Postulacion
 ID ayenv0 160131 515 25
-opc debug
+#opc debug
 ct inv
 fs 1 40
 box 0 0 25 60

@@ -1,6 +1,6 @@
 #Seleccionar Ayudante
 ID aysel 160143 23 2
-opc debug
+#opc debug
 ct inv
 fs 1 20
 box 0 0 15 30
