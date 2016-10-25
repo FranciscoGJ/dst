@@ -21,11 +21,12 @@ ce 8 9 1 13 AN 0
 cf 10 4 14 ID Solicitud
 cs 10 19 14 0 AN 0
 #---------------------------
-cm 12 4 27 14
+cm 12 4 26 14
 tm 00 5 Error
-tm 01 27 Solicitud Creadad Con Exito
+tm 01 26 Solicitud Creada Con Exito
 tm 02 24 Error Curso no Existente
 tm 03 25 Error Seccion Inexistente
 tm 04 21 Error Anio Incorrecto
 tm 05 25 Error Semestre Incorrecto
+tm 06 19 Solicitud Existente
 ff
