@@ -22,4 +22,5 @@ tm 99 5 Error
 tm 01 5 Exito
 tm 02 17 Curso Inexistente
 tm 03 23 Postulacion Inexistente
+tm 10 12 Rut Invalido
 ff

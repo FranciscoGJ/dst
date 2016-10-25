@@ -12,14 +12,13 @@ def proceso(aci,tx_in,tx_out,tx_sa):
         tx_out = generator_space(23) + ("99")
         return {'tx_out':tx_out,'tx_sa':tx_sa,'aci':aci}
 
-    if tx_in[9:].count(' ') == 400:
+    if tx_in[18:].count(' ') == 400:
         tx_out = generator_space(23) + ("04")
         return {'tx_out':tx_out,'tx_sa':tx_sa,'aci':aci}
 
-    #verif rut
-    #if tx_in[9:].count(' ') == 400:
-    #    tx_out = generator_space(23) + ("03")
-    #    return {'tx_out':tx_out,'tx_sa':tx_sa,'aci':aci}
+    if not verificador_rut(tx_in[9:][:9]):
+       tx_out = generator_space(23) + ("10")
+       return {'tx_out':tx_out,'tx_sa':tx_sa,'aci':aci}
 
     cola = Cola_mensajes()
 

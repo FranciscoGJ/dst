@@ -25,4 +25,5 @@ tm 01 19 Solicitud Pendiente
 tm 02 18 Solicitud Aceptada
 tm 03 24 Error Curso no Existente
 tm 04 25 Error Seccion Inexistente
+tm 10 12 Rut Invalido
 ff

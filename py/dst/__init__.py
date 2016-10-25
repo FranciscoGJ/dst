@@ -12,5 +12,14 @@ def digito_verificador(rut):
     return (-s) % 11
 
 def verificador_rut(rut_digito):
-    rut=rut_digito[:8]
-    digito=rut[8]
+    rut=str(int(rut_digito[:8]))
+    digito=rut_digito[8].upper()
+    print digito,rut
+    digito_correcto= digito_verificador(rut)
+    print digito_correcto
+    if digito_correcto==10:
+        digito_correcto="K"
+    if str(digito_correcto)==str(digito):
+        return True
+    return False
+

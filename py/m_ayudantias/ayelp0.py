@@ -12,6 +12,11 @@ def proceso(aci,tx_in,tx_out,tx_sa):
         tx_out = "99"
         return {'tx_out':tx_out,'tx_sa':tx_sa,'aci':aci}
 
+    if not verificador_rut(tx_in[9:][:9]):
+        tx_out = generator_space(23) + ("10")
+        return {'tx_out':tx_out,'tx_sa':tx_sa,'aci':aci}
+
+
     cola = Cola_mensajes()
 
     hoy = datetime.now()

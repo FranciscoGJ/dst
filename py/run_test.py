@@ -1,3 +1,3 @@
-from m_ayudantias.aysela import proceso
-
-print proceso("","cit10000120162184068702","","")
+from m_ayudantias.ayenv0 import proceso
+from dst import generator_space
+print proceso("","cit1000012596246 kasdf"+generator_space(400-4),"","")

@@ -17,6 +17,7 @@ ce 8 4 8 9 AN 0
 cf 8 12 1 -
 ce 8 13 1 17 AN 0
 #---------------------------
+cm 10 4 23 0
 tm 99 5 Error
 tm 01 5 Exito
 tm 02 17 Curso Inexistente

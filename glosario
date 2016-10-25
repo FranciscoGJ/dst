@@ -1,0 +1,12 @@
+#glosario de formularios#
+
+Funcionalidad							Fromulario
+
+Levantar Solicitud						ayslev
+Enviar Postulación						ayenv0
+Consultar Postulaciones a Solicitud		aycon0
+Consultar Estado de Postulación			ayconp
+Modificar Postulación					ayacp0
+Eliminar Postulación					ayelp0
+Seleccionar Ayudante					aysela
+Eliminar Solicitud						ayels0

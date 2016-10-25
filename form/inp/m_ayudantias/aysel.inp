@@ -21,7 +21,7 @@ ce 10 4 8 14 AN 0
 cf 10 12 1 -
 ce 10 13 1 22 AN 0
 #---------------------------
-cm 9 4 27 0
+cm 11 4 27 0
 tm 00 5 Error
 tm 01 27 Exito
 tm 02 24 Error Curso no Existente
