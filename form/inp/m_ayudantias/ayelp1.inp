@@ -28,7 +28,8 @@ cf 17 4 2 Si
 cf 18 4 2 No
 ce 18 7 2 0 AN 0
 #--------------------------
+cm 19 4 21 409
 tm 99 5 Error
-tm 01 21 Postulacion Eliminada
+tm 03 21 Postulacion Eliminada
 tm 02 17 Opcion Incorrecta
 ff
